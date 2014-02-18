@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://jefferson.tw.rpi.edu/id/> .
+
+<http://jefferson.tw.rpi.edu/source/rpi-aeap/dataset/chem>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "rpi-aeap";
+   conversion:dataset_identifier "chem";
+   prov:wasDerivedFrom :download_ebc447bda03016ae5067cb8321e9979a;
+.
+
+:download_ebc447bda03016ae5067cb8321e9979a
+   a dcat:Distribution;
+   dcat:downloadURL <https://raw.github.com/YueLiu/shinyapp/master/AEAP_NYSERDA_Chem_94-12_v9_web.csv>;
+.
+
+<dataset/ebc447bda03016ae5067cb8321e9979a>
+   a dcat:Dataset;
+   dcat:distribution :download_ebc447bda03016ae5067cb8321e9979a;
+.
