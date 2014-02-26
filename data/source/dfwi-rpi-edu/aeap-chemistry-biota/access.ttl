@@ -7,10 +7,10 @@
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 @prefix :           <http://jefferson.tw.rpi.edu/id/> .
 
-<http://jefferson.tw.rpi.edu/source/rpi-aeap/dataset/chem>
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/aeap-chemistry-biota>
    a void:Dataset, dcat:Dataset;
-   conversion:source_identifier  "rpi-aeap";
-   conversion:dataset_identifier "chem";
+   conversion:source_identifier  "dfwi-rpi-edu";
+   conversion:dataset_identifier "aeap-chemistry-biota";
    prov:wasDerivedFrom :download_ebc447bda03016ae5067cb8321e9979a;
 .
 
