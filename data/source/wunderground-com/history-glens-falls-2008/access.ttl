@@ -1,0 +1,27 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://jefferson.tw.rpi.edu/id/> .
+@base               <http://jefferson.tw.rpi.edu/id/> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "wunderground-com";
+   conversion:dataset_identifier "history-glens-falls-2008";
+   conversion:identifier         "a7aa4979bf07b0865bf2f8772d4cdead";
+   prov:wasDerivedFrom <distribution/5eff94ed821d5001300aa88da0640c7b>;
+.
+
+<distribution/5eff94ed821d5001300aa88da0640c7b>
+   a dcat:Distribution;
+   dcat:downloadURL <http://www.wunderground.com/history/airport/KGFL/2008/1/1/CustomHistory.html?dayend=31&monthend=12&yearend=2008&req_city=NA&req_state=NA&req_statename=NA&MR=1&format=1>;
+.
+
+<dataset/5eff94ed821d5001300aa88da0640c7b>
+   a dcat:Dataset;
+   dcat:distribution <distribution/5eff94ed821d5001300aa88da0640c7b>;
+.
