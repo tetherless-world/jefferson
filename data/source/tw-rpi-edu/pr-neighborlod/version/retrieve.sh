@@ -1,0 +1,1 @@
+/home/chastaka/opt/prizms/bin/dataset/pr-neighborlod.sh
