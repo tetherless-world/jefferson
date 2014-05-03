@@ -6,6 +6,5 @@
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 @prefix :           <http://jefferson.tw.rpi.edu/id/> .
 
-<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008>
-   foaf:page <http://blah.org/mypage>;
+<http://www.wunderground.com/history/airport/KGFL/2008/1/1/CustomHistory.html?dayend=31&monthend=12&yearend=2008&req_city=NA&req_state=NA&req_statename=NA>;
 .
