@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/twc/semantgeo/source/DFWI/dataset/hague_salts/version/20140416/conversion/enhancement/1> <http://purl.org/twc/vocab/conversion/base_uri> "http://purl.org/twc/semantgeo"@en;
+ <http://purl.org/twc/vocab/conversion/source_identifier> "DFWI"@en;
+ <http://purl.org/twc/vocab/conversion/dataset_identifier> "hague_salts"@en;
+ <http://purl.org/twc/vocab/conversion/version_identifier> "20140416"@en;
+ <http://purl.org/twc/vocab/conversion/enhancement_identifier> "1"@en;
+ <http://purl.org/twc/vocab/conversion/conversion_process> _:c1;
+ <http://purl.org/twc/vocab/conversion/enhance> _:c12 .
+_:c1 rdf:type <http://purl.org/twc/vocab/conversion/EnhancementConversionProcess>;
+ <http://purl.org/twc/vocab/conversion/enhance> _:c2, _:c3, _:c4, _:c5, _:c6, _:c7, _:c8, _:c9, _:c10, _:c11 .
+_:c2 <http://open.vocab.org/terms/csvCol> 1;
+ <http://open.vocab.org/terms/csvHeader> "Tributary Name"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Tributary Name"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:string .
+_:c3 <http://open.vocab.org/terms/csvCol> 2;
+ <http://open.vocab.org/terms/csvHeader> "Sample Date"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Sample Date"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:string;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://www.w3.org/2006/time#inXSDDateTime> .
+_:c4 <http://open.vocab.org/terms/csvCol> 3;
+ <http://open.vocab.org/terms/csvHeader> "Sample Acquired (time)"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Sample Acquired (time)"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:int .
+_:c5 <http://open.vocab.org/terms/csvCol> 4;
+ <http://open.vocab.org/terms/csvHeader> "Cl (mg/l)"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Cl (mg/l)"@en;
+ <http://purl.org/twc/vocab/conversion/range> <http://localhost:8080/annotator/double>;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+_:c6 <http://open.vocab.org/terms/csvCol> 5;
+ <http://open.vocab.org/terms/csvHeader> "Na (mg/l)"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Na (mg/l)"@en;
+ <http://purl.org/twc/vocab/conversion/range> <http://localhost:8080/annotator/double>;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+_:c7 <http://open.vocab.org/terms/csvCol> 5;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasUnit>;
+ <http://purl.org/twc/vocab/conversion/object> <http://purl.obolibrary.org/obo/UO_0000273> .
+_:c8 <http://open.vocab.org/terms/csvCol> 5;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic>;
+ <http://purl.org/twc/vocab/conversion/object> <http://purl.obolibrary.org/obo/CHEBI_29101> .
+_:c9 <http://open.vocab.org/terms/csvCol> 4;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasUnit>;
+ <http://purl.org/twc/vocab/conversion/object> <http://purl.obolibrary.org/obo/UO_0000273> .
+_:c10 <http://open.vocab.org/terms/csvCol> 4;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic>;
+ <http://purl.org/twc/vocab/conversion/object> <http://purl.obolibrary.org/obo/CHEBI_30120> .
+_:c11 <http://purl.org/twc/vocab/conversion/class_name> "Water measurement"@en;
+ <http://purl.org/twc/vocab/conversion/subclass_of> <http://escience.rpi.edu/ontology/semanteco/2/0/water.owl#WaterMeasurement> .
+_:c12 rdf:type <qb:Observation>;
+ <http://open.vocab.org/terms/csvColumn> 4,5 .
