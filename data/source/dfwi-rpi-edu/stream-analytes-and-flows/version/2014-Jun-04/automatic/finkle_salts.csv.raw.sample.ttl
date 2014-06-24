@@ -1,0 +1,805 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix stream-analytes-and-flows: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/> .
+@prefix dfwi-rpi-edu_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:tributary_name a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Tributary Name" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Tributary Name" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:tributary_name .
+
+raw:sample_date a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Sample Date" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Date" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_date .
+
+raw:sample_acquired_time a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "Sample Acquired (time)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Acquired time" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_acquired_time .
+
+raw:cl_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "Cl (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Cl mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:cl_mg_l .
+
+raw:na_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "5"^^xsd:integer ;
+	ov:csvHeader "Na (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Na mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:na_mg_l .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_2> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Jan-08" ;
+	raw:sample_acquired_time "1700" ;
+	raw:cl_mg_l "18.10" ;
+	raw:na_mg_l "11.740" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_3> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Jan-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "19.30" ;
+	raw:na_mg_l "12.820" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_4> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "10-Jan-08" ;
+	raw:sample_acquired_time "0300" ;
+	raw:cl_mg_l "14.10" ;
+	raw:na_mg_l "9.700" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_5> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "10-Jan-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "16.80" ;
+	raw:na_mg_l "10.900" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_6> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "17-Jan-08" ;
+	raw:sample_acquired_time "1410" ;
+	raw:cl_mg_l "30.20" ;
+	raw:na_mg_l "24.640" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_7> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "14-Feb-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "33.10" ;
+	raw:na_mg_l "30.480" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_8> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "2000" ;
+	raw:cl_mg_l "44.80" ;
+	raw:na_mg_l "25.60" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_9> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1200" ;
+	raw:cl_mg_l "108.00" ;
+	raw:na_mg_l "51.120" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_10> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1600" ;
+	raw:cl_mg_l "65.70" ;
+	raw:na_mg_l "36.80" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_11> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1000" ;
+	raw:cl_mg_l "111.00" ;
+	raw:na_mg_l "67.440" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+# CSV2RDF4LOD DATASET METADATA (reproduced from above):
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix stream-analytes-and-flows: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/> .
+@prefix dfwi-rpi-edu_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:tributary_name a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Tributary Name" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Tributary Name" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:tributary_name .
+
+raw:sample_date a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Sample Date" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Date" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_date .
+
+raw:sample_acquired_time a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "Sample Acquired (time)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Acquired time" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_acquired_time .
+
+raw:cl_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "Cl (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Cl mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:cl_mg_l .
+
+raw:na_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "5"^^xsd:integer ;
+	ov:csvHeader "Na (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Na mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:na_mg_l .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix stream-analytes-and-flows: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/> .
+@prefix dfwi-rpi-edu_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://jefferson.tw.rpi.edu/void.ttl> a void:DatasetDescription ;
+	foaf:topic <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows> ;
+	foaf:primaryTopic <http://jefferson.tw.rpi.edu/void> .
+
+<http://jefferson.tw.rpi.edu/void> a void:Dataset ;
+	void:subset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows> a dfwi-rpi-edu_vocab:Dataset , conversion:Dataset , conversion:AbstractDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "dfwi-rpi-edu" ;
+	conversion:dataset_identifier "stream-analytes-and-flows" ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu> ;
+	dcterms:identifier "dfwi-rpi-edu stream-analytes-and-flows" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset_page/stream-analytes-and-flows> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> , <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/subset/meta> ;
+	dcterms:modified "2014-06-24T11:39:13.393Z"^^xsd:dateTime .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> a dfwi-rpi-edu_vocab:Dataset , conversion:Dataset , conversion:VersionedDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "dfwi-rpi-edu" ;
+	conversion:dataset_identifier "stream-analytes-and-flows" ;
+	conversion:version_identifier "2014-Jun-04" ;
+	conversion:dataset_version "2014-Jun-04" ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu> ;
+	dcterms:identifier "dfwi-rpi-edu stream-analytes-and-flows 2014-Jun-04" ;
+	dcterms:modified "2014-06-24T11:39:13.393Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset_page/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.ttl.gz> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> a dfwi-rpi-edu_vocab:Dataset , conversion:Dataset , conversion:LayerDataset , void:Dataset , conversion:RawDataset ;
+	dcterms:modified "2014-06-24T11:39:13.393Z"^^xsd:dateTime ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "dfwi-rpi-edu" ;
+	conversion:dataset_identifier "stream-analytes-and-flows" ;
+	conversion:version_identifier "2014-Jun-04" ;
+	conversion:dataset_version "2014-Jun-04" ;
+	conversion:conversion_identifier "raw" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset_page/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.raw.ttl.gz> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/subset/sample> ;
+	conversion:uses_predicate void:inDataset , raw:na_mg_l , ov:csvRow , raw:tributary_name , dcterms:isReferencedBy , raw:cl_mg_l , raw:sample_acquired_time , raw:sample_date ;
+	void:vocabulary <http://rdfs.org/ns/void#> , <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> , <http://open.vocab.org/terms/> , <http://purl.org/dc/terms/> .
+
+void:inDataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+raw:na_mg_l rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+ov:csvRow rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+raw:tributary_name rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+dcterms:isReferencedBy rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+raw:cl_mg_l rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+raw:sample_acquired_time rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+raw:sample_date rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> void:exampleResource <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_2> , <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_11> ;
+	dcterms:created "2014-06-24T11:39:13.110Z"^^xsd:dateTime ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu> ;
+	dcterms:identifier "dfwi-rpi-edu stream-analytes-and-flows 2014-Jun-04 raw" .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/subset/sample> a dfwi-rpi-edu_vocab:Dataset , conversion:Dataset , conversion:DatasetSample , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "dfwi-rpi-edu" ;
+	conversion:dataset_identifier "stream-analytes-and-flows" ;
+	conversion:version_identifier "2014-Jun-04" ;
+	conversion:dataset_version "2014-Jun-04" ;
+	conversion:conversion_identifier "raw" ;
+	dcterms:modified "2014-06-24T11:39:13.393Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset_page/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/subset/sample> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.raw.sample.ttl> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.raw.sample.ttl> dcterms:format <http://www.w3.org/ns/formats/Turtle> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu> a foaf:Agent ;
+	dcterms:identifier "dfwi-rpi-edu" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source_page/dfwi-rpi-edu> .
+
+_:node18r78fqe6x209 vann:preferredNamespacePrefix "rdf" ;
+	vann:preferredNamespaceUri "http://www.w3.org/1999/02/22-rdf-syntax-ns#" .
+
+_:node18r78fqe6x210 vann:preferredNamespacePrefix "rdfs" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#" .
+
+_:node18r78fqe6x211 vann:preferredNamespacePrefix "xsd" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2001/XMLSchema#" .
+
+_:node18r78fqe6x212 vann:preferredNamespacePrefix "xsd2" ;
+	vann:preferredNamespaceUri "http://www.w3.org/TR/xmlschema-2/#" .
+
+_:node18r78fqe6x213 vann:preferredNamespacePrefix "owl" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2002/07/owl#" .
+
+_:node18r78fqe6x214 vann:preferredNamespacePrefix "pmlp" ;
+	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-provenance.owl#" .
+
+_:node18r78fqe6x215 vann:preferredNamespacePrefix "pmlj" ;
+	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-justification.owl#" .
+
+_:node18r78fqe6x216 vann:preferredNamespacePrefix "tw_service" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/" .
+
+_:node18r78fqe6x217 vann:preferredNamespacePrefix "tw_converter" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/" .
+
+_:node18r78fqe6x218 vann:preferredNamespacePrefix "conversion" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/vocab/conversion/" .
+
+_:node18r78fqe6x219 vann:preferredNamespacePrefix "ov" ;
+	vann:preferredNamespaceUri "http://open.vocab.org/terms/" .
+
+_:node18r78fqe6x220 vann:preferredNamespacePrefix "dcterms" ;
+	vann:preferredNamespaceUri "http://purl.org/dc/terms/" .
+
+_:node18r78fqe6x221 vann:preferredNamespacePrefix "foaf" ;
+	vann:preferredNamespaceUri "http://xmlns.com/foaf/0.1/" .
+
+_:node18r78fqe6x222 vann:preferredNamespacePrefix "void" ;
+	vann:preferredNamespaceUri "http://rdfs.org/ns/void#" .
+
+_:node18r78fqe6x223 vann:preferredNamespacePrefix "doap" ;
+	vann:preferredNamespaceUri "http://usefulinc.com/ns/doap#" .
+
+_:node18r78fqe6x224 vann:preferredNamespacePrefix "scovo" ;
+	vann:preferredNamespaceUri "http://purl.org/NET/scovo#" .
+
+_:node18r78fqe6x225 vann:preferredNamespacePrefix "qb" ;
+	vann:preferredNamespaceUri "http://purl.org/linked-data/cube#" .
+
+_:node18r78fqe6x226 vann:preferredNamespacePrefix "vann" ;
+	vann:preferredNamespaceUri "http://purl.org/vocab/vann/" .
+
+_:node18r78fqe6x227 vann:preferredNamespacePrefix "frbrcore" ;
+	vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" .
+
+_:node18r78fqe6x228 vann:preferredNamespacePrefix "coin" ;
+	vann:preferredNamespaceUri "http://purl.org/court/def/2009/coin#" .
+
+_:node18r78fqe6x229 vann:preferredNamespacePrefix "stream-analytes-and-flows" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/" .
+
+_:node18r78fqe6x230 vann:preferredNamespacePrefix "dfwi-rpi-edu_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/" .
+
+_:node18r78fqe6x231 vann:preferredNamespacePrefix "base_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/vocab/" .
+
+_:node18r78fqe6x232 vann:preferredNamespacePrefix "local_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/" .
+
+_:node18r78fqe6x233 vann:preferredNamespacePrefix "raw" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/" .
+
+_:node18r78fqe6x234 vann:preferredNamespacePrefix "" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/" .
+
+_:node18r78fqe6x235 vann:preferredNamespacePrefix "sioc" ;
+	vann:preferredNamespaceUri "http://rdfs.org/sioc/ns#" .
+
+_:node18r78fqe6x207 rdfs:seeAlso _:node18r78fqe6x209 , _:node18r78fqe6x210 , _:node18r78fqe6x211 , _:node18r78fqe6x212 , _:node18r78fqe6x213 , _:node18r78fqe6x214 , _:node18r78fqe6x215 , _:node18r78fqe6x216 , _:node18r78fqe6x217 , _:node18r78fqe6x218 , _:node18r78fqe6x219 , _:node18r78fqe6x220 , _:node18r78fqe6x221 , _:node18r78fqe6x222 , _:node18r78fqe6x223 , _:node18r78fqe6x224 , _:node18r78fqe6x225 , _:node18r78fqe6x226 , _:node18r78fqe6x227 , _:node18r78fqe6x228 , _:node18r78fqe6x229 , _:node18r78fqe6x230 , _:node18r78fqe6x231 , _:node18r78fqe6x232 , _:node18r78fqe6x233 , _:node18r78fqe6x234 , _:node18r78fqe6x235 .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_1> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.raw.ttl.gz> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_2> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.ttl.gz> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_3> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.raw.sample.ttl> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/infstep_1> a pmlj:InferenceStep ;
+	pmlj:hasInferenceEngine tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 ;
+	pmlj:hasAntecedentList _:node18r78fqe6x236 ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> _:node18r78fqe6x237 , _:node18r78fqe6x238 .
+
+<http://purl.org/twc/id/software/csv2rdf4lod> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+<http://data.lod2.eu/2011/tools/CSV2RDF4LOD> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 a pmlp:InferenceEngine , doap:Version ;
+	dcterms:identifier "csv2rdf4lod_92ec096603a21b573af51009bc16e229" ;
+	dcterms:version "2014-May-29" ;
+	doap:revision "2014-May-29" ;
+	doap:platform "Java" ;
+	<http://www.w3.org/ns/prov#specializationOf> <http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> .
+
+<http://purl.org/twc/id/software/csv2rdf4lod> rdfs:seeAlso <https://github.com/timrdf/csv2rdf4lod-automation/wiki> .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> a doap:Project ;
+	doap:implements <http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data> , <http://purl.org/twc/vocab/conversion/> ;
+	dcterms:author <http://tw.rpi.edu/instances/TimLebo> ;
+	doap:developer <http://tw.rpi.edu/instances/TimLebo> , <http://tw.rpi.edu/instances/GregoryToddWilliams> , <http://kasei.us/about/foaf.xrdf#greg> , <http://tw.rpi.edu/instances/JamesMcCusker> , <http://tw.rpi.edu/instances/ZhenningShangguan> ;
+	doap:maintainer <http://tw.rpi.edu/instances/TimLebo> ;
+	doap:documenter <http://tw.rpi.edu/instances/TimLebo> , <http://tw.rpi.edu/instances/JohannaFlores> , <http://tw.rpi.edu/instances/LiDing> , <http://tw.rpi.edu/instances/GinoGervasio> ;
+	doap:helper <http://tw.rpi.edu/instances/AlvaroGraves> , <http://tw.rpi.edu/instances/DominicDiFranzo> , <http://tw.rpi.edu/instances/GinoGervasio> , <http://tw.rpi.edu/instances/PingWang> , <http://tw.rpi.edu/instances/XianLi> , <http://tw.rpi.edu/instances/JamesMcCusker> , <http://www.w3.org/People/Eric/ericP-foaf#ericP> , <http://tw.rpi.edu/instances/AnkitSrivastava> , <http://purl.org/twc/id/person/Maryam_Fazel-Zarandi> , <http://tw.rpi.edu/instances/AlexanderLahuerta> ;
+	doap:homepage <https://github.com/timrdf/csv2rdf4lod-automation/wiki> ;
+	doap:audience "Data modelers and architects that need (potentially non-RDB) tabular data encoded within the Resource Description Framework." ;
+	doap:shortdesc "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/" ;
+	doap:description "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/. Organizes datasets using 'source', 'dataset', and 'version' identifiers to allow for third-party aggregation, refinement, and integration of third-party data. Uses predicate 'layers' to allow backward-compatible refinements of Resources' descriptions. Minimizes human error and increases transparancy of conversion by using RDF-encoded interpretation parameters to control all processing." .
+
+_:node18r78fqe6x239 a doap:GitRepository ;
+	foaf:isPrimaryTopicOf <https://github.com/timrdf/csv2rdf4lod-automation> ;
+	doap:browse <https://github.com/timrdf/csv2rdf4lod-automation> .
+
+<http://tw.rpi.edu/instances/GregoryToddWilliams> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://kasei.us/about/foaf.xrdf#greg> .
+
+<http://tw.rpi.edu/instances/AlvaroGraves> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://alvaro.graves.cl> .
+
+<http://purl.org/twc/id/person/TimLebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://tw.rpi.edu/wiki/Special:URIResolver/Tim_Lebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://www.cs.rpi.edu/~weavej3/r/Tim_Lebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://purl.org/twc/id/person/Maryam_Fazel-Zarandi> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/MaryamFazel-Zarandi> .
+
+_:node18r78fqe6x236 a rdf:List ;
+	rdf:first <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_4> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_4> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/source/finkle_salts.csv> .
+
+_:node18r78fqe6x236 rdf:rest _:node18r78fqe6x240 .
+
+_:node18r78fqe6x240 a rdf:List ;
+	rdf:first <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_5> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/nodeset_5> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/automatic/finkle_salts.csv.raw.params.ttl> .
+
+_:node18r78fqe6x237 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> .
+
+_:node18r78fqe6x240 rdf:rest rdf:nil .
+
+_:node18r78fqe6x237 <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/source/finkle_salts.csv> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Input.owl#Input> .
+
+_:node18r78fqe6x238 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/automatic/finkle_salts.csv.raw.params.ttl> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Parameters.owl#Parameters> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/source/finkle_salts.csv> a pmlp:Information ;
+	pmlp:hasFormat <http://iw.cs.utep.edu/registry/FMT/text/CSV.owl#CSV> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/filestream-analytes-and-flows/version/2014-Jun-04/automatic/finkle_salts.csv.raw.params.ttl> a pmlp:Information ;
+	pmlp:hasFormat <http://inference-web.org/registry/FMT/RDFAbstractSyntax.owl#RDFAbstractSyntax> .
+
+conversion:SameAsDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:uses_class rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:has_version rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:MetaDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:num_triples rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:enhances rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:enhancement_layer rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:DatasetSample rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:source_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:VersionedDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:LayerDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:base_uri rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:uses_predicate rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:interpretation rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:symbol rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:dataset_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:conversion_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:AbstractDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:null rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:subject_discriminator rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:Dataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:version_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> conversion:base_uri "http://jefferson.tw.rpi.edu"^^xsd:anyURI .
+
+_:node18r78fqghx1 a conversion:RawConversionProcess ;
+	conversion:conversion_identifier "raw" .
+
+_:node18r78fqghx2 a foaf:OnlineAccount ;
+	foaf:accountName "oneironym" .
+
+_:node18r78fqghx1 dcterms:creator _:node18r78fqghx2 ;
+	dcterms:created "2014-06-24T11:39:11-04:00"^^xsd:dateTime ;
+	conversion:delimits_cell "," .
+
+_:node18r78fqghx3 ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Tributary Name" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r78fqghx1 conversion:enhance _:node18r78fqghx3 .
+
+_:node18r78fqghx4 ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Sample Date" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r78fqghx1 conversion:enhance _:node18r78fqghx4 .
+
+_:node18r78fqghx5 ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "Sample Acquired (time)" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r78fqghx1 conversion:enhance _:node18r78fqghx5 .
+
+_:node18r78fqghx6 ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "Cl (mg/l)" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r78fqghx1 conversion:enhance _:node18r78fqghx6 .
+
+_:node18r78fqghx7 ov:csvCol "5"^^xsd:integer ;
+	ov:csvHeader "Na (mg/l)" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r78fqghx1 conversion:enhance _:node18r78fqghx7 .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> conversion:conversion_process _:node18r78fqghx1 .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/subset/meta> a dfwi-rpi-edu_vocab:Dataset , conversion:Dataset , conversion:MetaDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "dfwi-rpi-edu" ;
+	conversion:dataset_identifier "stream-analytes-and-flows" ;
+	dcterms:modified "2014-06-24T11:39:13.393Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset_page/stream-analytes-and-flows/subset/meta> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/file/stream-analytes-and-flows/version/2014-Jun-04/conversion/dfwi-rpi-edu-stream-analytes-and-flows-2014-Jun-04.void.ttl.gz> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> conversion:num_triples "115"^^xsd:integer ;
+	void:triples "115"^^xsd:integer ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/translationActivity_44e18d4e-e0c6-4ad6-a395-9756b84f242b> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/provenance/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw/translationActivity_44e18d4e-e0c6-4ad6-a395-9756b84f242b> a <http://www.w3.org/ns/prov#Activity> , <http://provenanceweb.org/ns/pml#TranslationActivity> ;
+	conversion:triples_per_minute "21630.094043887148"^^xsd:double ;
+	<http://www.w3.org/ns/prov#used> void:inDataset , raw:na_mg_l , ov:csvRow , raw:tributary_name , dcterms:isReferencedBy , raw:cl_mg_l , raw:sample_acquired_time , raw:sample_date ;
+	void:vocabulary <http://rdfs.org/ns/void#> , <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> , <http://open.vocab.org/terms/> , <http://purl.org/dc/terms/> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/subset/meta> conversion:uses_predicate ov:csvRow , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> , void:dataDump , conversion:VersionedDataset , rdfs:label , foaf:topic , foaf:isPrimaryTopicOf , dcterms:author , doap:implements , pmlj:hasInferenceEngine , dcterms:identifier , doap:revision , dcterms:modified , vann:preferredNamespaceUri , rdfs:isDefinedBy , doap:helper , conversion:uses_predicate , ov:csvCol , doap:audience , doap:description , dcterms:format , doap:documenter , conversion:conversion_identifier , rdfs:range , conversion:version_identifier , pmlp:hasFormat , doap:homepage , conversion:num_triples , doap:shortdesc , pmlj:hasConclusion , dcterms:isReferencedBy , pmlj:hasAntecedentList , foaf:primaryTopic , conversion:base_uri , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> , void:exampleResource , conversion:dataset_identifier , rdf:type , void:subset , <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> , void:triples , doap:browse , doap:developer , ov:csvHeader , rdfs:seeAlso , doap:maintainer , conversion:source_identifier , conversion:LayerDataset , dcterms:contributor , doap:platform , vann:preferredNamespacePrefix , pmlj:isConsequentOf , <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> , void:vocabulary , dcterms:version ;
+	void:vocabulary <http://open.vocab.org/terms/> , <http://inference-web.org/2.1exper/pml-provenance.owl#> , <http://rdfs.org/ns/void#> , <http://purl.org/twc/vocab/conversion/> , <http://www.w3.org/2000/01/rdf-schema#> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://usefulinc.com/ns/doap#> , <http://inference-web.org/2.0/pml-justification.owl#> , <http://purl.org/vocab/vann/> , <http://inference-web.org/2.0/pml-provenance.owl#> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:dataDump rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+conversion:VersionedDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdfs:label rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+foaf:topic rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+foaf:isPrimaryTopicOf rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+dcterms:author rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:implements rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+pmlj:hasInferenceEngine rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+dcterms:identifier rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:revision rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+dcterms:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+vann:preferredNamespaceUri rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/vocab> .
+
+rdfs:isDefinedBy rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+doap:helper rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:uses_predicate <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+ov:csvCol rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+doap:audience rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+doap:description rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+dcterms:format rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:documenter rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:conversion_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdfs:range rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+conversion:version_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+pmlp:hasFormat rdfs:isDefinedBy <http://inference-web.org/2.0/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+doap:homepage rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:num_triples <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+doap:shortdesc rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+pmlj:hasConclusion rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+pmlj:hasAntecedentList rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+foaf:primaryTopic rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+conversion:base_uri <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:exampleResource rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+conversion:dataset_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdf:type rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+void:subset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+<http://www.w3.org/2000/10/swap/pim/contact#preferredURI> rdfs:isDefinedBy <http://www.w3.org/2000/10/swap/pim/contact#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+void:triples rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+doap:browse rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+doap:developer rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+ov:csvHeader rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+rdfs:seeAlso rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+doap:maintainer rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:source_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:LayerDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+dcterms:contributor rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:platform rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+vann:preferredNamespacePrefix rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/vocab> .
+
+pmlj:isConsequentOf rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:vocabulary rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+dcterms:version rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/subset/meta> conversion:uses_class void:Dataset , foaf:Agent , conversion:MetaDataset , conversion:DatasetSample , conversion:AbstractDataset , void:DatasetDescription , dfwi-rpi-edu_vocab:Dataset , conversion:Dataset ;
+	void:vocabulary <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+
+void:Dataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+foaf:Agent rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+conversion:MetaDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:DatasetSample <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:AbstractDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+void:DatasetDescription rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+dfwi-rpi-edu_vocab:Dataset rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+conversion:Dataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> rdfs:comment "hash: 369bcbdf7c3832ab55e68964bb1d1edab12d618ee7" .

@@ -1,0 +1,296 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix stream-analytes-and-flows: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/> .
+@prefix dfwi-rpi-edu_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:tributary_name a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Tributary Name" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Tributary Name" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:tributary_name .
+
+raw:sample_date a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Sample Date" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Date" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_date .
+
+raw:sample_acquired_time a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "Sample Acquired (time)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Acquired time" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_acquired_time .
+
+raw:cl_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "Cl (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Cl mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:cl_mg_l .
+
+raw:na_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "5"^^xsd:integer ;
+	ov:csvHeader "Na (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Na mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:na_mg_l .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_2> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "17-Jan-08" ;
+	raw:sample_acquired_time "1240" ;
+	raw:cl_mg_l "10.30" ;
+	raw:na_mg_l "7.540" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_3> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "14-Feb-08" ;
+	raw:sample_acquired_time "1330" ;
+	raw:cl_mg_l "14.80" ;
+	raw:na_mg_l "11.780" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_4> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "13-Mar-08" ;
+	raw:sample_acquired_time "1155" ;
+	raw:cl_mg_l "14.50" ;
+	raw:na_mg_l "8.90" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_5> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "4/10/08" ;
+	raw:sample_acquired_time "0930" ;
+	raw:cl_mg_l "9.13" ;
+	raw:na_mg_l "2.88" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_6> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "24-Apr-08" ;
+	raw:sample_acquired_time "1210" ;
+	raw:cl_mg_l "14.00" ;
+	raw:na_mg_l "8.06" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_7> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "28-Apr-08" ;
+	raw:sample_acquired_time "1500" ;
+	raw:cl_mg_l "17.50" ;
+	raw:na_mg_l "19.52" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_8> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "29-Apr-08" ;
+	raw:sample_acquired_time "1900" ;
+	raw:cl_mg_l "13.40" ;
+	raw:na_mg_l "8.20" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_9> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "29-Apr-08" ;
+	raw:sample_acquired_time "0300" ;
+	raw:cl_mg_l "13.00" ;
+	raw:na_mg_l "7.12" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_10> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "29-Apr-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "12.40" ;
+	raw:na_mg_l "6.70" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_11> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "30-Apr-08" ;
+	raw:sample_acquired_time "0700" ;
+	raw:cl_mg_l "11.60" ;
+	raw:na_mg_l "6.70" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_12> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "7-May-08" ;
+	raw:sample_acquired_time "1130" ;
+	raw:cl_mg_l "14.30" ;
+	raw:na_mg_l "11.06" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_13> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "22-May-08" ;
+	raw:sample_acquired_time "1130" ;
+	raw:cl_mg_l "21.5" ;
+	raw:na_mg_l "13.40" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_14> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "2-Jun-08" ;
+	raw:sample_acquired_time "1220" ;
+	raw:cl_mg_l "25.5" ;
+	raw:na_mg_l "15.95" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_15> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "16-Jun-08" ;
+	raw:sample_acquired_time "1300" ;
+	raw:cl_mg_l "27.2" ;
+	raw:na_mg_l "16.34" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_16> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "9-Jul-08" ;
+	raw:sample_acquired_time "1115" ;
+	raw:cl_mg_l "22.30" ;
+	raw:na_mg_l "12.74" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_17> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "17-Jul-08" ;
+	raw:sample_acquired_time "1345" ;
+	raw:cl_mg_l "21.00" ;
+	raw:na_mg_l "11.76" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_18> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "30-Jul-08" ;
+	raw:sample_acquired_time "1145" ;
+	raw:cl_mg_l "18.700" ;
+	raw:na_mg_l "10.16" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_19> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "13-Aug-08" ;
+	raw:sample_acquired_time "1145" ;
+	raw:cl_mg_l "14.7" ;
+	raw:na_mg_l "11.16" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_20> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "27-Aug-08" ;
+	raw:sample_acquired_time "1130" ;
+	raw:cl_mg_l "15.0" ;
+	raw:na_mg_l "12.44" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_21> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "8-Sep-08" ;
+	raw:sample_acquired_time "1200" ;
+	raw:cl_mg_l "27.6" ;
+	raw:na_mg_l "13.78" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_22> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "22-Sep-08" ;
+	raw:sample_acquired_time "1240" ;
+	raw:cl_mg_l "24.4" ;
+	raw:na_mg_l "12.84" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_23> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "6-Oct-08" ;
+	raw:sample_acquired_time "1310" ;
+	raw:cl_mg_l "26.1" ;
+	raw:na_mg_l "15.30" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_24> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "20-Oct-08" ;
+	raw:sample_acquired_time "1350" ;
+	raw:cl_mg_l "69.1" ;
+	raw:na_mg_l "15.92" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_25> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "9-Dec-08" ;
+	raw:sample_acquired_time "1500" ;
+	raw:cl_mg_l "15.23" ;
+	raw:na_mg_l "8.24" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_26> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "10-Dec-08" ;
+	raw:sample_acquired_time "2100" ;
+	raw:cl_mg_l "9.516" ;
+	raw:na_mg_l "6.72" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_27> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "10-Dec-08" ;
+	raw:sample_acquired_time "1500" ;
+	raw:cl_mg_l "7.69" ;
+	raw:na_mg_l "6.86" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_28> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "10-Dec-08" ;
+	raw:sample_acquired_time "0300" ;
+	raw:cl_mg_l "21.555" ;
+	raw:na_mg_l "13.84" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_29> raw:tributary_name "Hague Brook" ;
+	raw:sample_date "11-Dec-08" ;
+	raw:sample_acquired_time "1145" ;
+	raw:cl_mg_l "8.213" ;
+	raw:na_mg_l "6.65" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .

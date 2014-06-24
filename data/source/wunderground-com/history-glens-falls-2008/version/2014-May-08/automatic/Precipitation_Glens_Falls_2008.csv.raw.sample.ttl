@@ -1,0 +1,766 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix history-glens-falls-2008: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/> .
+@prefix wunderground-com_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:date_est a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Date: EST" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Date: EST" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:date_est .
+
+raw:precipitation_in a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Precipitation (In)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Precipitation In" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:precipitation_in .
+
+raw:column_3 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_3" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_3 .
+
+raw:column_4 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_4" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_4 .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_2> raw:date_est "1/1/08" ;
+	raw:precipitation_in "0.35" ;
+	raw:column_3 "" ;
+	raw:column_4 "Note: T = trace" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_3> raw:date_est "1/2/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_4> raw:date_est "1/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_5> raw:date_est "1/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_6> raw:date_est "1/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_7> raw:date_est "1/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_8> raw:date_est "1/7/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_9> raw:date_est "1/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_10> raw:date_est "1/9/08" ;
+	raw:precipitation_in "0.11" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_11> raw:date_est "1/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+# CSV2RDF4LOD DATASET METADATA (reproduced from above):
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix history-glens-falls-2008: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/> .
+@prefix wunderground-com_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:date_est a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Date: EST" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Date: EST" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:date_est .
+
+raw:precipitation_in a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Precipitation (In)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Precipitation In" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:precipitation_in .
+
+raw:column_3 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_3" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_3 .
+
+raw:column_4 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_4" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_4 .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix history-glens-falls-2008: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/> .
+@prefix wunderground-com_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://jefferson.tw.rpi.edu/void.ttl> a void:DatasetDescription ;
+	foaf:topic <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008> ;
+	foaf:primaryTopic <http://jefferson.tw.rpi.edu/void> .
+
+<http://jefferson.tw.rpi.edu/void> a void:Dataset ;
+	void:subset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008> a wunderground-com_vocab:Dataset , conversion:Dataset , conversion:AbstractDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "wunderground-com" ;
+	conversion:dataset_identifier "history-glens-falls-2008" ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/wunderground-com> ;
+	dcterms:identifier "wunderground-com history-glens-falls-2008" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset_page/history-glens-falls-2008> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> , <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/subset/meta> ;
+	dcterms:modified "2014-06-23T21:57:50.273Z"^^xsd:dateTime .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> a wunderground-com_vocab:Dataset , conversion:Dataset , conversion:VersionedDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "wunderground-com" ;
+	conversion:dataset_identifier "history-glens-falls-2008" ;
+	conversion:version_identifier "2014-May-08" ;
+	conversion:dataset_version "2014-May-08" ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/wunderground-com> ;
+	dcterms:identifier "wunderground-com history-glens-falls-2008 2014-May-08" ;
+	dcterms:modified "2014-06-23T21:57:50.273Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset_page/history-glens-falls-2008/version/2014-May-08> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.ttl.gz> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> a wunderground-com_vocab:Dataset , conversion:Dataset , conversion:LayerDataset , void:Dataset , conversion:RawDataset ;
+	dcterms:modified "2014-06-23T21:57:50.273Z"^^xsd:dateTime ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "wunderground-com" ;
+	conversion:dataset_identifier "history-glens-falls-2008" ;
+	conversion:version_identifier "2014-May-08" ;
+	conversion:dataset_version "2014-May-08" ;
+	conversion:conversion_identifier "raw" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset_page/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.raw.ttl.gz> ;
+	void:subset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw/subset/sample> ;
+	conversion:uses_predicate void:inDataset , raw:column_4 , ov:csvRow , raw:column_3 , dcterms:isReferencedBy , raw:date_est , raw:precipitation_in ;
+	void:vocabulary <http://rdfs.org/ns/void#> , <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> , <http://open.vocab.org/terms/> , <http://purl.org/dc/terms/> .
+
+void:inDataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+raw:column_4 rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+ov:csvRow rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+raw:column_3 rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+dcterms:isReferencedBy rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+raw:date_est rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+raw:precipitation_in rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> void:exampleResource <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_2> , <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_11> ;
+	dcterms:created "2014-06-23T21:57:49.960Z"^^xsd:dateTime ;
+	dcterms:contributor <http://jefferson.tw.rpi.edu/source/wunderground-com> ;
+	dcterms:identifier "wunderground-com history-glens-falls-2008 2014-May-08 raw" .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw/subset/sample> a wunderground-com_vocab:Dataset , conversion:Dataset , conversion:DatasetSample , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "wunderground-com" ;
+	conversion:dataset_identifier "history-glens-falls-2008" ;
+	conversion:version_identifier "2014-May-08" ;
+	conversion:dataset_version "2014-May-08" ;
+	conversion:conversion_identifier "raw" ;
+	dcterms:modified "2014-06-23T21:57:50.273Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset_page/history-glens-falls-2008/version/2014-May-08/conversion/raw/subset/sample> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.raw.sample.ttl> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.raw.sample.ttl> dcterms:format <http://www.w3.org/ns/formats/Turtle> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com> a foaf:Agent ;
+	dcterms:identifier "wunderground-com" ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source_page/wunderground-com> .
+
+_:node18r5pfq77x182 vann:preferredNamespacePrefix "rdf" ;
+	vann:preferredNamespaceUri "http://www.w3.org/1999/02/22-rdf-syntax-ns#" .
+
+_:node18r5pfq77x183 vann:preferredNamespacePrefix "rdfs" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#" .
+
+_:node18r5pfq77x184 vann:preferredNamespacePrefix "xsd" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2001/XMLSchema#" .
+
+_:node18r5pfq77x185 vann:preferredNamespacePrefix "xsd2" ;
+	vann:preferredNamespaceUri "http://www.w3.org/TR/xmlschema-2/#" .
+
+_:node18r5pfq77x186 vann:preferredNamespacePrefix "owl" ;
+	vann:preferredNamespaceUri "http://www.w3.org/2002/07/owl#" .
+
+_:node18r5pfq77x187 vann:preferredNamespacePrefix "pmlp" ;
+	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-provenance.owl#" .
+
+_:node18r5pfq77x188 vann:preferredNamespacePrefix "pmlj" ;
+	vann:preferredNamespaceUri "http://inference-web.org/2.0/pml-justification.owl#" .
+
+_:node18r5pfq77x189 vann:preferredNamespacePrefix "tw_service" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/" .
+
+_:node18r5pfq77x190 vann:preferredNamespacePrefix "tw_converter" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/" .
+
+_:node18r5pfq77x191 vann:preferredNamespacePrefix "conversion" ;
+	vann:preferredNamespaceUri "http://purl.org/twc/vocab/conversion/" .
+
+_:node18r5pfq77x192 vann:preferredNamespacePrefix "ov" ;
+	vann:preferredNamespaceUri "http://open.vocab.org/terms/" .
+
+_:node18r5pfq77x193 vann:preferredNamespacePrefix "dcterms" ;
+	vann:preferredNamespaceUri "http://purl.org/dc/terms/" .
+
+_:node18r5pfq77x194 vann:preferredNamespacePrefix "foaf" ;
+	vann:preferredNamespaceUri "http://xmlns.com/foaf/0.1/" .
+
+_:node18r5pfq77x195 vann:preferredNamespacePrefix "void" ;
+	vann:preferredNamespaceUri "http://rdfs.org/ns/void#" .
+
+_:node18r5pfq77x196 vann:preferredNamespacePrefix "doap" ;
+	vann:preferredNamespaceUri "http://usefulinc.com/ns/doap#" .
+
+_:node18r5pfq77x197 vann:preferredNamespacePrefix "scovo" ;
+	vann:preferredNamespaceUri "http://purl.org/NET/scovo#" .
+
+_:node18r5pfq77x198 vann:preferredNamespacePrefix "qb" ;
+	vann:preferredNamespaceUri "http://purl.org/linked-data/cube#" .
+
+_:node18r5pfq77x199 vann:preferredNamespacePrefix "vann" ;
+	vann:preferredNamespaceUri "http://purl.org/vocab/vann/" .
+
+_:node18r5pfq77x200 vann:preferredNamespacePrefix "frbrcore" ;
+	vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" .
+
+_:node18r5pfq77x201 vann:preferredNamespacePrefix "coin" ;
+	vann:preferredNamespaceUri "http://purl.org/court/def/2009/coin#" .
+
+_:node18r5pfq77x202 vann:preferredNamespacePrefix "history-glens-falls-2008" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/" .
+
+_:node18r5pfq77x203 vann:preferredNamespacePrefix "wunderground-com_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/" .
+
+_:node18r5pfq77x204 vann:preferredNamespacePrefix "base_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/vocab/" .
+
+_:node18r5pfq77x205 vann:preferredNamespacePrefix "local_vocab" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/" .
+
+_:node18r5pfq77x206 vann:preferredNamespacePrefix "raw" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/" .
+
+_:node18r5pfq77x207 vann:preferredNamespacePrefix "" ;
+	vann:preferredNamespaceUri "http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/params/raw/" .
+
+_:node18r5pfq77x208 vann:preferredNamespacePrefix "sioc" ;
+	vann:preferredNamespaceUri "http://rdfs.org/sioc/ns#" .
+
+_:node18r5pfq77x180 rdfs:seeAlso _:node18r5pfq77x182 , _:node18r5pfq77x183 , _:node18r5pfq77x184 , _:node18r5pfq77x185 , _:node18r5pfq77x186 , _:node18r5pfq77x187 , _:node18r5pfq77x188 , _:node18r5pfq77x189 , _:node18r5pfq77x190 , _:node18r5pfq77x191 , _:node18r5pfq77x192 , _:node18r5pfq77x193 , _:node18r5pfq77x194 , _:node18r5pfq77x195 , _:node18r5pfq77x196 , _:node18r5pfq77x197 , _:node18r5pfq77x198 , _:node18r5pfq77x199 , _:node18r5pfq77x200 , _:node18r5pfq77x201 , _:node18r5pfq77x202 , _:node18r5pfq77x203 , _:node18r5pfq77x204 , _:node18r5pfq77x205 , _:node18r5pfq77x206 , _:node18r5pfq77x207 , _:node18r5pfq77x208 .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_1> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.ttl.gz> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_2> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.raw.sample.ttl> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_3> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.raw.ttl.gz> ;
+	pmlj:isConsequentOf <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/infstep_1> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/infstep_1> a pmlj:InferenceStep ;
+	pmlj:hasInferenceEngine tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 ;
+	pmlj:hasAntecedentList _:node18r5pfq77x209 ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> _:node18r5pfq77x211 , _:node18r5pfq77x210 .
+
+<http://purl.org/twc/id/software/csv2rdf4lod> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+<http://data.lod2.eu/2011/tools/CSV2RDF4LOD> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 .
+
+tw_converter:csv2rdf4lod_92ec096603a21b573af51009bc16e229 a pmlp:InferenceEngine , doap:Version ;
+	dcterms:identifier "csv2rdf4lod_92ec096603a21b573af51009bc16e229" ;
+	dcterms:version "2014-May-29" ;
+	doap:revision "2014-May-29" ;
+	doap:platform "Java" ;
+	<http://www.w3.org/ns/prov#specializationOf> <http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> .
+
+<http://purl.org/twc/id/software/csv2rdf4lod> rdfs:seeAlso <https://github.com/timrdf/csv2rdf4lod-automation/wiki> .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> a doap:Project ;
+	doap:implements <http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data> , <http://purl.org/twc/vocab/conversion/> ;
+	dcterms:author <http://tw.rpi.edu/instances/TimLebo> ;
+	doap:developer <http://tw.rpi.edu/instances/TimLebo> , <http://tw.rpi.edu/instances/GregoryToddWilliams> , <http://kasei.us/about/foaf.xrdf#greg> , <http://tw.rpi.edu/instances/JamesMcCusker> , <http://tw.rpi.edu/instances/ZhenningShangguan> ;
+	doap:maintainer <http://tw.rpi.edu/instances/TimLebo> ;
+	doap:documenter <http://tw.rpi.edu/instances/TimLebo> , <http://tw.rpi.edu/instances/JohannaFlores> , <http://tw.rpi.edu/instances/LiDing> , <http://tw.rpi.edu/instances/GinoGervasio> ;
+	doap:helper <http://tw.rpi.edu/instances/AlvaroGraves> , <http://tw.rpi.edu/instances/DominicDiFranzo> , <http://tw.rpi.edu/instances/GinoGervasio> , <http://tw.rpi.edu/instances/PingWang> , <http://tw.rpi.edu/instances/XianLi> , <http://tw.rpi.edu/instances/JamesMcCusker> , <http://www.w3.org/People/Eric/ericP-foaf#ericP> , <http://tw.rpi.edu/instances/AnkitSrivastava> , <http://purl.org/twc/id/person/Maryam_Fazel-Zarandi> , <http://tw.rpi.edu/instances/AlexanderLahuerta> ;
+	doap:homepage <https://github.com/timrdf/csv2rdf4lod-automation/wiki> ;
+	doap:audience "Data modelers and architects that need (potentially non-RDB) tabular data encoded within the Resource Description Framework." ;
+	doap:shortdesc "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/" ;
+	doap:description "Converts CSV files to RDF using parameters specified by http://purl.org/twc/vocab/conversion/. Organizes datasets using 'source', 'dataset', and 'version' identifiers to allow for third-party aggregation, refinement, and integration of third-party data. Uses predicate 'layers' to allow backward-compatible refinements of Resources' descriptions. Minimizes human error and increases transparancy of conversion by using RDF-encoded interpretation parameters to control all processing." .
+
+_:node18r5pfq77x212 a doap:GitRepository ;
+	foaf:isPrimaryTopicOf <https://github.com/timrdf/csv2rdf4lod-automation> ;
+	doap:browse <https://github.com/timrdf/csv2rdf4lod-automation> .
+
+<http://tw.rpi.edu/instances/GregoryToddWilliams> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://kasei.us/about/foaf.xrdf#greg> .
+
+<http://tw.rpi.edu/instances/AlvaroGraves> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://alvaro.graves.cl> .
+
+<http://purl.org/twc/id/person/TimLebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://tw.rpi.edu/wiki/Special:URIResolver/Tim_Lebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://www.cs.rpi.edu/~weavej3/r/Tim_Lebo> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/TimLebo> .
+
+<http://purl.org/twc/id/person/Maryam_Fazel-Zarandi> <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> <http://tw.rpi.edu/instances/MaryamFazel-Zarandi> .
+
+_:node18r5pfq77x209 a rdf:List ;
+	rdf:first <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_4> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_4> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/source/Precipitation_Glens_Falls_2008.csv> .
+
+_:node18r5pfq77x209 rdf:rest _:node18r5pfq77x213 .
+
+_:node18r5pfq77x213 a rdf:List ;
+	rdf:first <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_5> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/nodeset_5> a pmlj:NodeSet ;
+	pmlj:hasConclusion <http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/automatic/Precipitation_Glens_Falls_2008.csv.raw.params.ttl> .
+
+_:node18r5pfq77x213 rdf:rest rdf:nil .
+
+_:node18r5pfq77x211 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/automatic/Precipitation_Glens_Falls_2008.csv.raw.params.ttl> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Parameters.owl#Parameters> .
+
+_:node18r5pfq77x210 a <http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> <http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/source/Precipitation_Glens_Falls_2008.csv> ;
+	<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> <http://inference-web.org/registry/ROLE/Input.owl#Input> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/source/Precipitation_Glens_Falls_2008.csv> a pmlp:Information ;
+	pmlp:hasFormat <http://iw.cs.utep.edu/registry/FMT/text/CSV.owl#CSV> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/filehistory-glens-falls-2008/version/2014-May-08/automatic/Precipitation_Glens_Falls_2008.csv.raw.params.ttl> a pmlp:Information ;
+	pmlp:hasFormat <http://inference-web.org/registry/FMT/RDFAbstractSyntax.owl#RDFAbstractSyntax> .
+
+conversion:SameAsDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:uses_class rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:has_version rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:MetaDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:num_triples rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:enhances rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:enhancement_layer rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:DatasetSample rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:source_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:VersionedDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:LayerDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:base_uri rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:uses_predicate rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:interpretation rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:symbol rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:dataset_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:conversion_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:AbstractDataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:null rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:subject_discriminator rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:Dataset rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+conversion:version_identifier rdfs:isDefinedBy <http://purl.org/twc/vocab/conversion/> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> conversion:base_uri "http://jefferson.tw.rpi.edu"^^xsd:anyURI .
+
+_:node18r5pfqbnx1 a conversion:RawConversionProcess ;
+	conversion:conversion_identifier "raw" .
+
+_:node18r5pfqbnx2 a foaf:OnlineAccount ;
+	foaf:accountName "oneironym" .
+
+_:node18r5pfqbnx1 dcterms:creator _:node18r5pfqbnx2 ;
+	dcterms:created "2014-06-23T21:57:48-04:00"^^xsd:dateTime ;
+	conversion:delimits_cell "," .
+
+_:node18r5pfqbnx3 ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Date: EST" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r5pfqbnx1 conversion:enhance _:node18r5pfqbnx3 .
+
+_:node18r5pfqbnx4 ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Precipitation (In)" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r5pfqbnx1 conversion:enhance _:node18r5pfqbnx4 .
+
+_:node18r5pfqbnx5 ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r5pfqbnx1 conversion:enhance _:node18r5pfqbnx5 .
+
+_:node18r5pfqbnx6 ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "" ;
+	conversion:comment "" ;
+	conversion:range rdfs:Literal .
+
+_:node18r5pfqbnx1 conversion:enhance _:node18r5pfqbnx6 .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> conversion:conversion_process _:node18r5pfqbnx1 .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/subset/meta> a wunderground-com_vocab:Dataset , conversion:Dataset , conversion:MetaDataset , void:Dataset ;
+	conversion:base_uri "http://jefferson.tw.rpi.edu" ;
+	conversion:source_identifier "wunderground-com" ;
+	conversion:dataset_identifier "history-glens-falls-2008" ;
+	dcterms:modified "2014-06-23T21:57:50.273Z"^^xsd:dateTime ;
+	foaf:isPrimaryTopicOf <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset_page/history-glens-falls-2008/subset/meta> ;
+	void:dataDump <http://jefferson.tw.rpi.edu/source/wunderground-com/file/history-glens-falls-2008/version/2014-May-08/conversion/wunderground-com-history-glens-falls-2008-2014-May-08.void.ttl.gz> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> conversion:num_triples "97"^^xsd:integer ;
+	void:triples "97"^^xsd:integer ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/translationActivity_dfc16b69-c7db-426b-b51c-ffc082e7c0b6> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/provenance/history-glens-falls-2008/version/2014-May-08/conversion/raw/translationActivity_dfc16b69-c7db-426b-b51c-ffc082e7c0b6> a <http://www.w3.org/ns/prov#Activity> , <http://provenanceweb.org/ns/pml#TranslationActivity> ;
+	conversion:triples_per_minute "18359.6214511041"^^xsd:double ;
+	<http://www.w3.org/ns/prov#used> void:inDataset , raw:column_4 , ov:csvRow , raw:column_3 , dcterms:isReferencedBy , raw:date_est , raw:precipitation_in ;
+	void:vocabulary <http://rdfs.org/ns/void#> , <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> , <http://open.vocab.org/terms/> , <http://purl.org/dc/terms/> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/subset/meta> conversion:uses_predicate ov:csvRow , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> , void:dataDump , conversion:VersionedDataset , rdfs:label , foaf:topic , foaf:isPrimaryTopicOf , dcterms:author , doap:implements , pmlj:hasInferenceEngine , dcterms:identifier , doap:revision , dcterms:modified , vann:preferredNamespaceUri , rdfs:isDefinedBy , doap:helper , conversion:uses_predicate , ov:csvCol , doap:audience , doap:description , dcterms:format , doap:documenter , conversion:conversion_identifier , rdfs:range , conversion:version_identifier , pmlp:hasFormat , doap:homepage , conversion:num_triples , doap:shortdesc , pmlj:hasConclusion , dcterms:isReferencedBy , pmlj:hasAntecedentList , foaf:primaryTopic , conversion:base_uri , <http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> , void:exampleResource , conversion:dataset_identifier , rdf:type , void:subset , <http://www.w3.org/2000/10/swap/pim/contact#preferredURI> , void:triples , doap:browse , doap:developer , ov:csvHeader , rdfs:seeAlso , doap:maintainer , conversion:source_identifier , conversion:LayerDataset , dcterms:contributor , doap:platform , vann:preferredNamespacePrefix , pmlj:isConsequentOf , <http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> , void:vocabulary , dcterms:version ;
+	void:vocabulary <http://open.vocab.org/terms/> , <http://inference-web.org/2.1exper/pml-provenance.owl#> , <http://rdfs.org/ns/void#> , <http://purl.org/twc/vocab/conversion/> , <http://www.w3.org/2000/01/rdf-schema#> , <http://xmlns.com/foaf/0.1/> , <http://purl.org/dc/terms/> , <http://usefulinc.com/ns/doap#> , <http://inference-web.org/2.0/pml-justification.owl#> , <http://purl.org/vocab/vann/> , <http://inference-web.org/2.0/pml-provenance.owl#> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedent> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:dataDump rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+conversion:VersionedDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdfs:label rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+foaf:topic rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+foaf:isPrimaryTopicOf rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+dcterms:author rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:implements rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+pmlj:hasInferenceEngine rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+dcterms:identifier rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:revision rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+dcterms:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+vann:preferredNamespaceUri rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/vocab> .
+
+rdfs:isDefinedBy rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+doap:helper rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:uses_predicate <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+ov:csvCol rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+doap:audience rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+doap:description rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+dcterms:format rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:documenter rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:conversion_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdfs:range rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+conversion:version_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+pmlp:hasFormat rdfs:isDefinedBy <http://inference-web.org/2.0/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+doap:homepage rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:num_triples <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+doap:shortdesc rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+pmlj:hasConclusion rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+pmlj:hasAntecedentList rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+foaf:primaryTopic rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+conversion:base_uri <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasAntecedentRole> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:exampleResource rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+conversion:dataset_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+rdf:type rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+void:subset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+<http://www.w3.org/2000/10/swap/pim/contact#preferredURI> rdfs:isDefinedBy <http://www.w3.org/2000/10/swap/pim/contact#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+void:triples rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+doap:browse rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+doap:developer rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+ov:csvHeader rdfs:isDefinedBy <http://open.vocab.org/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://open.vocab.org> .
+
+rdfs:seeAlso rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org> .
+
+doap:maintainer rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+conversion:source_identifier <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:LayerDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+dcterms:contributor rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+doap:platform rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://usefulinc.com> .
+
+vann:preferredNamespacePrefix rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/vocab> .
+
+pmlj:isConsequentOf rdfs:isDefinedBy <http://inference-web.org/2.0/pml-justification.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+<http://inference-web.org/2.1exper/pml-provenance.owl#hasRole> rdfs:isDefinedBy <http://inference-web.org/2.1exper/pml-provenance.owl#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://inference-web.org> .
+
+void:vocabulary rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+dcterms:version rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/subset/meta> conversion:uses_class void:Dataset , foaf:Agent , conversion:MetaDataset , conversion:DatasetSample , conversion:AbstractDataset , void:DatasetDescription , conversion:Dataset , wunderground-com_vocab:Dataset ;
+	void:vocabulary <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> .
+
+void:Dataset rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+foaf:Agent rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://xmlns.com> .
+
+conversion:MetaDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:DatasetSample <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+conversion:AbstractDataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+void:DatasetDescription rdfs:isDefinedBy <http://rdfs.org/ns/void#> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://rdfs.org> .
+
+conversion:Dataset <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/twc> .
+
+wunderground-com_vocab:Dataset rdfs:isDefinedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://jefferson.tw.rpi.edu> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> rdfs:comment "hash: 26d1ddcc58322f38fb1ddb0860ef3440904aa9fb01" .

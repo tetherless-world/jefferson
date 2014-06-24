@@ -1,0 +1,2625 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix history-glens-falls-2008: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/> .
+@prefix wunderground-com_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:date_est a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Date: EST" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Date: EST" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:date_est .
+
+raw:precipitation_in a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Precipitation (In)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "Precipitation In" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:precipitation_in .
+
+raw:column_3 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_3" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_3 .
+
+raw:column_4 a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/conversion/raw> ;
+	rdfs:label "column_4" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:column_4 .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_2> raw:date_est "1/1/08" ;
+	raw:precipitation_in "0.35" ;
+	raw:column_3 "" ;
+	raw:column_4 "Note: T = trace" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_3> raw:date_est "1/2/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_4> raw:date_est "1/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_5> raw:date_est "1/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_6> raw:date_est "1/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_7> raw:date_est "1/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_8> raw:date_est "1/7/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_9> raw:date_est "1/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_10> raw:date_est "1/9/08" ;
+	raw:precipitation_in "0.11" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_11> raw:date_est "1/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_12> raw:date_est "1/11/08" ;
+	raw:precipitation_in "1.18" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_13> raw:date_est "1/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_14> raw:date_est "1/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_15> raw:date_est "1/14/08" ;
+	raw:precipitation_in "0.09" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_16> raw:date_est "1/15/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_17> raw:date_est "1/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_18> raw:date_est "1/17/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_19> raw:date_est "1/18/08" ;
+	raw:precipitation_in "0.4" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_20> raw:date_est "1/19/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_21> raw:date_est "1/20/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_22> raw:date_est "1/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_23> raw:date_est "1/22/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_24> raw:date_est "1/23/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_25> raw:date_est "1/24/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_26> raw:date_est "1/25/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_27> raw:date_est "1/26/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_28> raw:date_est "1/27/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_29> raw:date_est "1/28/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_30> raw:date_est "1/29/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_31> raw:date_est "1/30/08" ;
+	raw:precipitation_in "0.39" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_32> raw:date_est "1/31/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_33> raw:date_est "2/1/08" ;
+	raw:precipitation_in "1.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_34> raw:date_est "2/2/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_35> raw:date_est "2/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_36> raw:date_est "2/4/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_37> raw:date_est "2/5/08" ;
+	raw:precipitation_in "1.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_38> raw:date_est "2/6/08" ;
+	raw:precipitation_in "0.8" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_39> raw:date_est "2/7/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_40> raw:date_est "2/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_41> raw:date_est "2/9/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_42> raw:date_est "2/10/08" ;
+	raw:precipitation_in "0.12" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_43> raw:date_est "2/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_44> raw:date_est "2/12/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_45> raw:date_est "2/13/08" ;
+	raw:precipitation_in "0.92" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_46> raw:date_est "2/14/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_47> raw:date_est "2/15/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_48> raw:date_est "2/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_49> raw:date_est "2/17/08" ;
+	raw:precipitation_in "0.36" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_50> raw:date_est "2/18/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_51> raw:date_est "2/19/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_52> raw:date_est "2/20/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_53> raw:date_est "2/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_54> raw:date_est "2/22/08" ;
+	raw:precipitation_in "0.13" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_55> raw:date_est "2/23/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_56> raw:date_est "2/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_57> raw:date_est "2/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_58> raw:date_est "2/26/08" ;
+	raw:precipitation_in "0.74" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_59> raw:date_est "2/27/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_60> raw:date_est "2/28/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_61> raw:date_est "2/29/08" ;
+	raw:precipitation_in "0.13" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_62> raw:date_est "3/1/08" ;
+	raw:precipitation_in "0.52" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_63> raw:date_est "3/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_64> raw:date_est "3/3/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_65> raw:date_est "3/4/08" ;
+	raw:precipitation_in "0.39" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_66> raw:date_est "3/5/08" ;
+	raw:precipitation_in "1.76" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_67> raw:date_est "3/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_68> raw:date_est "3/7/08" ;
+	raw:precipitation_in "0.53" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_69> raw:date_est "3/8/08" ;
+	raw:precipitation_in "1.22" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_70> raw:date_est "3/9/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_71> raw:date_est "3/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_72> raw:date_est "3/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_73> raw:date_est "3/12/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_74> raw:date_est "3/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_75> raw:date_est "3/14/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_76> raw:date_est "3/15/08" ;
+	raw:precipitation_in "0.16" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_77> raw:date_est "3/16/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_78> raw:date_est "3/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_79> raw:date_est "3/18/08" ;
+	raw:precipitation_in "0.05" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_80> raw:date_est "3/19/08" ;
+	raw:precipitation_in "0.79" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_81> raw:date_est "3/20/08" ;
+	raw:precipitation_in "0.12" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_82> raw:date_est "3/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_83> raw:date_est "3/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_84> raw:date_est "3/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_85> raw:date_est "3/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_86> raw:date_est "3/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_87> raw:date_est "3/26/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_88> raw:date_est "3/27/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_89> raw:date_est "3/28/08" ;
+	raw:precipitation_in "0.45" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_90> raw:date_est "3/29/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_91> raw:date_est "3/30/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_92> raw:date_est "3/31/08" ;
+	raw:precipitation_in "0.17" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_93> raw:date_est "4/1/08" ;
+	raw:precipitation_in "0.22" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_94> raw:date_est "4/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_95> raw:date_est "4/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_96> raw:date_est "4/4/08" ;
+	raw:precipitation_in "0.14" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_97> raw:date_est "4/5/08" ;
+	raw:precipitation_in "0.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_98> raw:date_est "4/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_99> raw:date_est "4/7/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_100> raw:date_est "4/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_101> raw:date_est "4/9/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_102> raw:date_est "4/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_103> raw:date_est "4/11/08" ;
+	raw:precipitation_in "0.37" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_104> raw:date_est "4/12/08" ;
+	raw:precipitation_in "0.58" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_105> raw:date_est "4/13/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_106> raw:date_est "4/14/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_107> raw:date_est "4/15/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_108> raw:date_est "4/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_109> raw:date_est "4/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_110> raw:date_est "4/18/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_111> raw:date_est "4/19/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_112> raw:date_est "4/20/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_113> raw:date_est "4/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_114> raw:date_est "4/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_115> raw:date_est "4/23/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_116> raw:date_est "4/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_117> raw:date_est "4/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_118> raw:date_est "4/26/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_119> raw:date_est "4/27/08" ;
+	raw:precipitation_in "0.07" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_120> raw:date_est "4/28/08" ;
+	raw:precipitation_in "1.11" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_121> raw:date_est "4/29/08" ;
+	raw:precipitation_in "0.43" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_122> raw:date_est "4/30/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_123> raw:date_est "5/1/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_124> raw:date_est "5/2/08" ;
+	raw:precipitation_in "0.16" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_125> raw:date_est "5/3/08" ;
+	raw:precipitation_in "0.21" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_126> raw:date_est "5/4/08" ;
+	raw:precipitation_in "0.34" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_127> raw:date_est "5/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_128> raw:date_est "5/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_129> raw:date_est "5/7/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_130> raw:date_est "5/8/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_131> raw:date_est "5/9/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_132> raw:date_est "5/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_133> raw:date_est "5/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_134> raw:date_est "5/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_135> raw:date_est "5/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_136> raw:date_est "5/14/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_137> raw:date_est "5/15/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_138> raw:date_est "5/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_139> raw:date_est "5/17/08" ;
+	raw:precipitation_in "0.07" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_140> raw:date_est "5/18/08" ;
+	raw:precipitation_in "0.14" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_141> raw:date_est "5/19/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_142> raw:date_est "5/20/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_143> raw:date_est "5/21/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_144> raw:date_est "5/22/08" ;
+	raw:precipitation_in "0.17" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_145> raw:date_est "5/23/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_146> raw:date_est "5/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_147> raw:date_est "5/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_148> raw:date_est "5/26/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_149> raw:date_est "5/27/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_150> raw:date_est "5/28/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_151> raw:date_est "5/29/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_152> raw:date_est "5/30/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_153> raw:date_est "5/31/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_154> raw:date_est "6/1/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_155> raw:date_est "6/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_156> raw:date_est "6/3/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_157> raw:date_est "6/4/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_158> raw:date_est "6/5/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_159> raw:date_est "6/6/08" ;
+	raw:precipitation_in "0.61" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_160> raw:date_est "6/7/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_161> raw:date_est "6/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_162> raw:date_est "6/9/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_163> raw:date_est "6/10/08" ;
+	raw:precipitation_in "0.15" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_164> raw:date_est "6/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_165> raw:date_est "6/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_166> raw:date_est "6/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_167> raw:date_est "6/14/08" ;
+	raw:precipitation_in "0.19" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_168> raw:date_est "6/15/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_169> raw:date_est "6/16/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_170> raw:date_est "6/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_171> raw:date_est "6/18/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_172> raw:date_est "6/19/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_173> raw:date_est "6/20/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_174> raw:date_est "6/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_175> raw:date_est "6/22/08" ;
+	raw:precipitation_in "0.28" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_176> raw:date_est "6/23/08" ;
+	raw:precipitation_in "0.16" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_177> raw:date_est "6/24/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_178> raw:date_est "6/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_179> raw:date_est "6/26/08" ;
+	raw:precipitation_in "0.13" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_180> raw:date_est "6/27/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_181> raw:date_est "6/28/08" ;
+	raw:precipitation_in "1.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_182> raw:date_est "6/29/08" ;
+	raw:precipitation_in "0.08" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_183> raw:date_est "6/30/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_184> raw:date_est "7/1/08" ;
+	raw:precipitation_in "0.11" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_185> raw:date_est "7/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_186> raw:date_est "7/3/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_187> raw:date_est "7/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_188> raw:date_est "7/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_189> raw:date_est "7/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_190> raw:date_est "7/7/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_191> raw:date_est "7/8/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_192> raw:date_est "7/9/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_193> raw:date_est "7/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_194> raw:date_est "7/11/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_195> raw:date_est "7/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_196> raw:date_est "7/13/08" ;
+	raw:precipitation_in "1.44" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_197> raw:date_est "7/14/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_198> raw:date_est "7/15/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_199> raw:date_est "7/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_200> raw:date_est "7/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_201> raw:date_est "7/18/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_202> raw:date_est "7/19/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_203> raw:date_est "7/20/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_204> raw:date_est "7/21/08" ;
+	raw:precipitation_in "0.07" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_205> raw:date_est "7/22/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_206> raw:date_est "7/23/08" ;
+	raw:precipitation_in "2.6" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_207> raw:date_est "7/24/08" ;
+	raw:precipitation_in "0.97" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_208> raw:date_est "7/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_209> raw:date_est "7/26/08" ;
+	raw:precipitation_in "0.61" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_210> raw:date_est "7/27/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_211> raw:date_est "7/28/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_212> raw:date_est "7/29/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_213> raw:date_est "7/30/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_214> raw:date_est "7/31/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_215> raw:date_est "8/1/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_216> raw:date_est "8/2/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_217> raw:date_est "8/3/08" ;
+	raw:precipitation_in "0.55" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_218> raw:date_est "8/4/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_219> raw:date_est "8/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_220> raw:date_est "8/6/08" ;
+	raw:precipitation_in "0.78" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_221> raw:date_est "8/7/08" ;
+	raw:precipitation_in "0.62" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_222> raw:date_est "8/8/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_223> raw:date_est "8/9/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_224> raw:date_est "8/10/08" ;
+	raw:precipitation_in "0.23" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_225> raw:date_est "8/11/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_226> raw:date_est "8/12/08" ;
+	raw:precipitation_in "0.37" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_227> raw:date_est "8/13/08" ;
+	raw:precipitation_in "0.16" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_228> raw:date_est "8/14/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_229> raw:date_est "8/15/08" ;
+	raw:precipitation_in "0.05" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_230> raw:date_est "8/16/08" ;
+	raw:precipitation_in "0.15" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_231> raw:date_est "8/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_232> raw:date_est "8/18/08" ;
+	raw:precipitation_in "0.12" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_233> raw:date_est "8/19/08" ;
+	raw:precipitation_in "1.53" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_234> raw:date_est "8/20/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_235> raw:date_est "8/21/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_236> raw:date_est "8/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_237> raw:date_est "8/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_238> raw:date_est "8/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_239> raw:date_est "8/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_240> raw:date_est "8/26/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_241> raw:date_est "8/27/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_242> raw:date_est "8/28/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_243> raw:date_est "8/29/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_244> raw:date_est "8/30/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_245> raw:date_est "8/31/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_246> raw:date_est "9/1/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_247> raw:date_est "9/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_248> raw:date_est "9/3/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_249> raw:date_est "9/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_250> raw:date_est "9/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_251> raw:date_est "9/6/08" ;
+	raw:precipitation_in "0.93" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_252> raw:date_est "9/7/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_253> raw:date_est "9/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_254> raw:date_est "9/9/08" ;
+	raw:precipitation_in "0.24" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_255> raw:date_est "9/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_256> raw:date_est "9/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_257> raw:date_est "9/12/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_258> raw:date_est "9/13/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_259> raw:date_est "9/14/08" ;
+	raw:precipitation_in "0.43" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_260> raw:date_est "9/15/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_261> raw:date_est "9/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_262> raw:date_est "9/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_263> raw:date_est "9/18/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_264> raw:date_est "9/19/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_265> raw:date_est "9/20/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_266> raw:date_est "9/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_267> raw:date_est "9/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_268> raw:date_est "9/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_269> raw:date_est "9/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_270> raw:date_est "9/25/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_271> raw:date_est "9/26/08" ;
+	raw:precipitation_in "0.28" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_272> raw:date_est "9/27/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_273> raw:date_est "9/28/08" ;
+	raw:precipitation_in "0.06" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_274> raw:date_est "9/29/08" ;
+	raw:precipitation_in "0.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_275> raw:date_est "9/30/08" ;
+	raw:precipitation_in "0.11" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_276> raw:date_est "10/1/08" ;
+	raw:precipitation_in "0.56" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_277> raw:date_est "10/2/08" ;
+	raw:precipitation_in "0.05" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_278> raw:date_est "10/3/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_279> raw:date_est "10/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_280> raw:date_est "10/5/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_281> raw:date_est "10/6/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_282> raw:date_est "10/7/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_283> raw:date_est "10/8/08" ;
+	raw:precipitation_in "0.19" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_284> raw:date_est "10/9/08" ;
+	raw:precipitation_in "0.06" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_285> raw:date_est "10/10/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_286> raw:date_est "10/11/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_287> raw:date_est "10/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_288> raw:date_est "10/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_289> raw:date_est "10/14/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_290> raw:date_est "10/15/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_291> raw:date_est "10/16/08" ;
+	raw:precipitation_in "0.58" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_292> raw:date_est "10/17/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_293> raw:date_est "10/18/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_294> raw:date_est "10/19/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_295> raw:date_est "10/20/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_296> raw:date_est "10/21/08" ;
+	raw:precipitation_in "0.28" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_297> raw:date_est "10/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_298> raw:date_est "10/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_299> raw:date_est "10/24/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_300> raw:date_est "10/25/08" ;
+	raw:precipitation_in "1.87" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_301> raw:date_est "10/26/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_302> raw:date_est "10/27/08" ;
+	raw:precipitation_in "0.31" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_303> raw:date_est "10/28/08" ;
+	raw:precipitation_in "0.75" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_304> raw:date_est "10/29/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_305> raw:date_est "10/30/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_306> raw:date_est "10/31/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_307> raw:date_est "11/1/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_308> raw:date_est "11/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_309> raw:date_est "11/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_310> raw:date_est "11/4/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_311> raw:date_est "11/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_312> raw:date_est "11/6/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_313> raw:date_est "11/7/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_314> raw:date_est "11/8/08" ;
+	raw:precipitation_in "0.14" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_315> raw:date_est "11/9/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_316> raw:date_est "11/10/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_317> raw:date_est "11/11/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_318> raw:date_est "11/12/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_319> raw:date_est "11/13/08" ;
+	raw:precipitation_in "0.38" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_320> raw:date_est "11/14/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_321> raw:date_est "11/15/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_322> raw:date_est "11/16/08" ;
+	raw:precipitation_in "0.32" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_323> raw:date_est "11/17/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_324> raw:date_est "11/18/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_325> raw:date_est "11/19/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_326> raw:date_est "11/20/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_327> raw:date_est "11/21/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_328> raw:date_est "11/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_329> raw:date_est "11/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_330> raw:date_est "11/24/08" ;
+	raw:precipitation_in "0.25" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_331> raw:date_est "11/25/08" ;
+	raw:precipitation_in "1.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_332> raw:date_est "11/26/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_333> raw:date_est "11/27/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_334> raw:date_est "11/28/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_335> raw:date_est "11/29/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_336> raw:date_est "11/30/08" ;
+	raw:precipitation_in "0.38" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_337> raw:date_est "12/1/08" ;
+	raw:precipitation_in "0.27" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_338> raw:date_est "12/2/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_339> raw:date_est "12/3/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_340> raw:date_est "12/4/08" ;
+	raw:precipitation_in "0.08" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_341> raw:date_est "12/5/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_342> raw:date_est "12/6/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_343> raw:date_est "12/7/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_344> raw:date_est "12/8/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_345> raw:date_est "12/9/08" ;
+	raw:precipitation_in "0.12" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_346> raw:date_est "12/10/08" ;
+	raw:precipitation_in "0.87" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_347> raw:date_est "12/11/08" ;
+	raw:precipitation_in "0.62" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_348> raw:date_est "12/12/08" ;
+	raw:precipitation_in "0.74" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_349> raw:date_est "12/13/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_350> raw:date_est "12/14/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_351> raw:date_est "12/15/08" ;
+	raw:precipitation_in "0.23" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_352> raw:date_est "12/16/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_353> raw:date_est "12/17/08" ;
+	raw:precipitation_in "0.5" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_354> raw:date_est "12/18/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_355> raw:date_est "12/19/08" ;
+	raw:precipitation_in "0.26" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_356> raw:date_est "12/20/08" ;
+	raw:precipitation_in "0.03" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_357> raw:date_est "12/21/08" ;
+	raw:precipitation_in "0.49" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_358> raw:date_est "12/22/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_359> raw:date_est "12/23/08" ;
+	raw:precipitation_in "0" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_360> raw:date_est "12/24/08" ;
+	raw:precipitation_in "0.37" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_361> raw:date_est "12/25/08" ;
+	raw:precipitation_in "0.01" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_362> raw:date_est "12/26/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_363> raw:date_est "12/27/08" ;
+	raw:precipitation_in "0.05" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_364> raw:date_est "12/28/08" ;
+	raw:precipitation_in "0.02" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_365> raw:date_est "12/29/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_366> raw:date_est "12/30/08" ;
+	raw:precipitation_in "T" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .
+
+<http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08/thing_367> raw:date_est "12/31/08" ;
+	raw:precipitation_in "0.04" ;
+	raw:column_3 "" ;
+	raw:column_4 "" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/wunderground-com/dataset/history-glens-falls-2008/version/2014-May-08> .

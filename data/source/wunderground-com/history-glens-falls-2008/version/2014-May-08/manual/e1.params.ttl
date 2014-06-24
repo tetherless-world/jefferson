@@ -1,0 +1,54 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+
+<http://purl.org/twc/semantgeo/source/WeatherUnderground/dataset/glens_falls_2008/version/2014-May-08/conversion/enhancement/1> <http://purl.org/twc/vocab/conversion/base_uri> "http://purl.org/twc/semantgeo"@en; # ^^xsd:anyURI;
+ <http://purl.org/twc/vocab/conversion/source_identifier> "WeatherUnderground"@en;
+ <http://purl.org/twc/vocab/conversion/dataset_identifier> "glens_falls_2008"@en;
+ <http://purl.org/twc/vocab/conversion/version_identifier> "2014-May-08"@en;
+ <http://purl.org/twc/vocab/conversion/enhancement_identifier> "1"@en;
+ <http://purl.org/twc/vocab/conversion/conversion_process> _:c1;
+ <http://purl.org/twc/vocab/conversion/enhance> _:c9 .
+ 
+_:c1 rdf:type <http://purl.org/twc/vocab/conversion/EnhancementConversionProcess>;
+ <http://purl.org/twc/vocab/conversion/enhance> _:c2, _:c3, _:c4, _:c5, _:c6, _:c7, _:c8 .
+ 
+_:c2 <http://open.vocab.org/terms/csvCol> 1;
+ <http://open.vocab.org/terms/csvHeader> "Month"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Month"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:gMonth;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://www.w3.org/2006/time#month> .
+
+_:c3 <http://open.vocab.org/terms/csvCol> 2;
+ <http://open.vocab.org/terms/csvHeader> "Day"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Day"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:gDay;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://www.w3.org/2006/time#day> .
+ 
+_:c4 <http://open.vocab.org/terms/csvCol> 3;
+ <http://open.vocab.org/terms/csvHeader> "Year"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Year"@en;
+ <http://purl.org/twc/vocab/conversion/range> xsd:gYear;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://www.w3.org/2006/time#year> .
+ 
+_:c5 <http://open.vocab.org/terms/csvCol> 4;
+ <http://open.vocab.org/terms/csvHeader> "Precipitation (m)"@en;
+ <http://purl.org/twc/vocab/conversion/label> "Precipitation (m)"@en;
+ <http://purl.org/twc/vocab/conversion/range> <http://localhost:8080/annotator/double>;
+ <http://purl.org/twc/vocab/conversion/equivalent_property> <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+ 
+_:c6 <http://open.vocab.org/terms/csvCol> 4;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasUnit>;
+ <http://purl.org/twc/vocab/conversion/object> <http://purl.obolibrary.org/obo/UO_0000008> .
+ 
+_:c7 <http://open.vocab.org/terms/csvCol> 4;
+ <http://purl.org/twc/vocab/conversion/predicate> <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic>;
+ <http://purl.org/twc/vocab/conversion/object> <http://sweet.jpl.nasa.gov/2.1/phenAtmoPrecipitation.owl#Rainfall> .
+ 
+_:c8 <http://purl.org/twc/vocab/conversion/class_name> "Measurement"@en;
+ <http://purl.org/twc/vocab/conversion/subclass_of> <http://sweet.jpl.nasa.gov/2.1/repr.owl#Measurement> .
+ 
+_:c9 rdf:type <qb:Observation>;
+ <http://open.vocab.org/terms/csvColumn> 4 .

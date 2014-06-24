@@ -1,0 +1,53 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix oboe: 		<http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl> .
+@prefix lso:		<http://jefferson.tw.rpi.edu/lso.owl> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix :			<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/finkle_flow/version/2014-Jun-04/conversion/enhancemennt/1> .
+
+:dataset a void:Dataset;
+   conversion:base_uri "http://jefferson.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier "dfwi-rpi-edu"@en;
+   conversion:dataset_identifier "finkle_flow"@en;
+   conversion:version_identifier "2014-Jun-05"@en;
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+	  
+	conversion:enhance [
+		ov:csvCol 1;
+		ov:csvHeader "Finkle";
+		conversion:label "Finkle";
+		conversion:comment "";
+		conversion:range xsd:dateTime;
+		conversion:equivalent_property <http://www.w3.org/2006/time#inXSDDateTime> .
+      ];
+	  
+	conversion:enhance [
+		ov:csvCol 2;
+		ov:csvHeader "cubic feet per sec"@en;
+		conversion:label"cubic feet per sec"
+		conversion:range xsd:double;
+		conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+      ];
+
+	conversion:enhance [
+		a conversion:SubjectAnnotation;	
+		conversion:predicate lso:observationOf;
+		conversion:object <http://sweet.jpl.nasa.gov/2.3/realmHydroBody.owl#Stream> .
+	];
+	
+	conversion:enhance [
+		a conversion:SubjectAnnotation;	
+		conversion:predicate oboe:ofCharacteristic;
+		conversion:object <http://sweet.jpl.nasa.gov/2.3/phenHydro.owl#Streamflow> .
+	];
+	
+	conversion:enhance [
+		a conversion:SubjectAnnotation;	
+		conversion:predicate oboe:hasUnit;
+		conversion:object <http://purl.obolibrary.org/obo/UO_0000270> .
+	];
+]; .

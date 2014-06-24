@@ -1,0 +1,376 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd2: <http://www.w3.org/TR/xmlschema-2/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj: <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix tw_service: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/> .
+@prefix tw_converter: <http://jefferson.tw.rpi.edu/source/tw-rpi-edu/service/csv2rdf4lod/version/2014-May-29/> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbrcore: <http://purl.org/vocab/frbr/core#> .
+@prefix coin: <http://purl.org/court/def/2009/coin#> .
+@prefix stream-analytes-and-flows: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/> .
+@prefix dfwi-rpi-edu_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/vocab/> .
+@prefix base_vocab: <http://jefferson.tw.rpi.edu/vocab/> .
+@prefix local_vocab: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/> .
+@prefix raw: <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/vocab/raw/> .
+@prefix : <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/params/raw/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+raw:tributary_name a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "1"^^xsd:integer ;
+	ov:csvHeader "Tributary Name" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Tributary Name" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:tributary_name .
+
+raw:sample_date a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "2"^^xsd:integer ;
+	ov:csvHeader "Sample Date" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Date" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_date .
+
+raw:sample_acquired_time a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "3"^^xsd:integer ;
+	ov:csvHeader "Sample Acquired (time)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Sample Acquired time" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:sample_acquired_time .
+
+raw:cl_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "4"^^xsd:integer ;
+	ov:csvHeader "Cl (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Cl mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:cl_mg_l .
+
+raw:na_mg_l a rdf:Property ;
+	ov:csvRow "1"^^xsd:integer ;
+	ov:csvCol "5"^^xsd:integer ;
+	ov:csvHeader "Na (mg/l)" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/conversion/raw> ;
+	rdfs:label "Na mg/l" ;
+	rdfs:range rdfs:Literal ;
+	conversion:enhances raw:na_mg_l .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_2> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Jan-08" ;
+	raw:sample_acquired_time "1700" ;
+	raw:cl_mg_l "18.10" ;
+	raw:na_mg_l "11.740" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_3> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Jan-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "19.30" ;
+	raw:na_mg_l "12.820" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_4> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "10-Jan-08" ;
+	raw:sample_acquired_time "0300" ;
+	raw:cl_mg_l "14.10" ;
+	raw:na_mg_l "9.700" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_5> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "10-Jan-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "16.80" ;
+	raw:na_mg_l "10.900" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_6> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "17-Jan-08" ;
+	raw:sample_acquired_time "1410" ;
+	raw:cl_mg_l "30.20" ;
+	raw:na_mg_l "24.640" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_7> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "14-Feb-08" ;
+	raw:sample_acquired_time "1100" ;
+	raw:cl_mg_l "33.10" ;
+	raw:na_mg_l "30.480" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_8> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "2000" ;
+	raw:cl_mg_l "44.80" ;
+	raw:na_mg_l "25.60" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_9> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1200" ;
+	raw:cl_mg_l "108.00" ;
+	raw:na_mg_l "51.120" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_10> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1600" ;
+	raw:cl_mg_l "65.70" ;
+	raw:na_mg_l "36.80" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_11> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "5-Mar-08" ;
+	raw:sample_acquired_time "1000" ;
+	raw:cl_mg_l "111.00" ;
+	raw:na_mg_l "67.440" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_12> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "6-Mar-08" ;
+	raw:sample_acquired_time "0200" ;
+	raw:cl_mg_l "34.70" ;
+	raw:na_mg_l "19.02" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_13> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "13-Mar-08" ;
+	raw:sample_acquired_time "1000" ;
+	raw:cl_mg_l "54.50" ;
+	raw:na_mg_l "34.48" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_14> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "4/10/08" ;
+	raw:sample_acquired_time "0900" ;
+	raw:cl_mg_l "29.40" ;
+	raw:na_mg_l "15.2" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_15> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "11-Apr-08" ;
+	raw:sample_acquired_time "1600" ;
+	raw:cl_mg_l "27.00" ;
+	raw:na_mg_l "18.44" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_16> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "12-Apr-08" ;
+	raw:sample_acquired_time "2000" ;
+	raw:cl_mg_l "22.70" ;
+	raw:na_mg_l "12.42" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_17> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "12-Apr-08" ;
+	raw:sample_acquired_time "0800" ;
+	raw:cl_mg_l "29.30" ;
+	raw:na_mg_l "16.02" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_18> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "13-Apr-08" ;
+	raw:sample_acquired_time "0400" ;
+	raw:cl_mg_l "24.10" ;
+	raw:na_mg_l "13.64" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_19> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "13-Apr-08" ;
+	raw:sample_acquired_time "1200" ;
+	raw:cl_mg_l "29.10" ;
+	raw:na_mg_l "14.7" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_20> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "24-Apr-08" ;
+	raw:sample_acquired_time "1050" ;
+	raw:cl_mg_l "69.80" ;
+	raw:na_mg_l "18.780" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_21> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "7-May-08" ;
+	raw:sample_acquired_time "0335" ;
+	raw:cl_mg_l "64.20" ;
+	raw:na_mg_l "33.84" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_22> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "22-May-08" ;
+	raw:sample_acquired_time "1025" ;
+	raw:cl_mg_l "119.00" ;
+	raw:na_mg_l "66.10" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_23> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "2-Jun-08" ;
+	raw:sample_acquired_time "1030" ;
+	raw:cl_mg_l "67.10" ;
+	raw:na_mg_l "98.50" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_24> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "16-Jun-08" ;
+	raw:sample_acquired_time "1130" ;
+	raw:cl_mg_l "172.8" ;
+	raw:na_mg_l "81.12" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_25> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Jul-08" ;
+	raw:sample_acquired_time "0940" ;
+	raw:cl_mg_l "145" ;
+	raw:na_mg_l "74.64" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_26> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "17-Jul-08" ;
+	raw:sample_acquired_time "0940" ;
+	raw:cl_mg_l "109.00" ;
+	raw:na_mg_l "53.12" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_27> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "30-Jul-08" ;
+	raw:sample_acquired_time "0950" ;
+	raw:cl_mg_l "73.200" ;
+	raw:na_mg_l "34.72" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_28> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "13-Aug-08" ;
+	raw:sample_acquired_time "1005" ;
+	raw:cl_mg_l "47.2" ;
+	raw:na_mg_l "33.44" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_29> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "27-Aug-08" ;
+	raw:sample_acquired_time "1020" ;
+	raw:cl_mg_l "85.1" ;
+	raw:na_mg_l "60.56" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_30> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "8-Sep-08" ;
+	raw:sample_acquired_time "1345" ;
+	raw:cl_mg_l "97.4" ;
+	raw:na_mg_l "78.08" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_31> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "22-Sep-08" ;
+	raw:sample_acquired_time "1500" ;
+	raw:cl_mg_l "152.8" ;
+	raw:na_mg_l "76.20" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_32> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "30-Sep-08" ;
+	raw:sample_acquired_time "2200" ;
+	raw:cl_mg_l "145.8" ;
+	raw:na_mg_l "75.20" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_33> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "1-Oct-08" ;
+	raw:sample_acquired_time "1400" ;
+	raw:cl_mg_l "148.2" ;
+	raw:na_mg_l "70.60" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_34> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "1-Oct-08" ;
+	raw:sample_acquired_time "0400" ;
+	raw:cl_mg_l "134.6" ;
+	raw:na_mg_l "70.60" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_35> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "1-Oct-08" ;
+	raw:sample_acquired_time "0800" ;
+	raw:cl_mg_l "140.8" ;
+	raw:na_mg_l "68.80" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_36> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "1-Oct-08" ;
+	raw:sample_acquired_time "0600" ;
+	raw:cl_mg_l "137.2" ;
+	raw:na_mg_l "66.80" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_37> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "6-Oct-08" ;
+	raw:sample_acquired_time "1440" ;
+	raw:cl_mg_l "137.8" ;
+	raw:na_mg_l "71.40" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_38> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "20-Oct-08" ;
+	raw:sample_acquired_time "1500" ;
+	raw:cl_mg_l "86.1" ;
+	raw:na_mg_l "64.00" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .
+
+<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04/thing_39> raw:tributary_name "Finkle Brook" ;
+	raw:sample_date "9-Dec-08" ;
+	raw:sample_acquired_time "1610" ;
+	raw:cl_mg_l "33.345" ;
+	raw:na_mg_l "28.00" ;
+	dcterms:isReferencedBy <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> ;
+	void:inDataset <http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/stream-analytes-and-flows/version/2014-Jun-04> .

@@ -1,0 +1,78 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix oboe: 		<http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl> .
+@prefix lso:		<http://jefferson.tw.rpi.edu/lso.owl> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix :			<http://jefferson.tw.rpi.edu/source/dfwi-rpi-edu/dataset/finkle_salts/version/2014-Jun-04/conversion/enhancemennt/1> .
+
+
+:dataset a void:Dataset;
+   conversion:base_uri "http://jefferson.tw.rpi.edu"^^xsd:anyURI;
+   conversion:source_identifier "dfwi-rpi-edu"@en;
+   conversion:dataset_identifier "finkle_salts"@en;
+   conversion:version_identifier "2014-Jun-04"@en;
+   conversion:conversion_process [
+      a conversion:EnhancementConversionProcess;
+      conversion:enhancement_identifier "1";
+
+	  conversion:enhance [
+		ov:csvCol 1;
+		ov:csvHeader "Tributary Name"@en;
+		conversion:label "Tributary Name"@en;
+		conversion:comment "";
+		conversion:range xsd:string;
+		conversion:equivalent_property lso:observationOf .
+      ];
+	  
+	conversion:enhance [
+		ov:csvCol 2;
+		ov:csvHeader "Sample Date";
+		conversion:label "Sample Date";
+		conversion:comment "";
+		conversion:range xsd:date;
+		conversion:equivalent_property <http://www.w3.org/2006/time#date> .
+		a conversion:Omitted;
+      ];
+	  
+	conversion:enhance [
+		ov:csvCol 3;
+		ov:csvHeader "Sample Acquired (time)";
+		conversion:label "Sample Acquired (time)";
+		conversion:comment "";
+		conversion:range xsd:dateTime;
+		conversion:range_template "[#2]T[#3]";
+		conversion:equivalent_property <http://www.w3.org/2006/time#inXSDDateTime> .
+      ];
+	  
+	conversion:enhance [
+		ov:csvCol 4;
+		ov:csvHeader "Cl (mg/l)";
+		a oboe:Measurement;
+		conversion:label "Cl (mg/l)";
+		conversion:object <http://purl.obolibrary.org/obo/CHEBI_30120>;
+		
+		conversion:range xsd:double;
+		conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+      ];
+
+	conversion:enhance [
+		ov:csvCol 5;
+		ov:csvHeader "Na (mg/l)";
+		a oboe:Measurement;
+		conversion:label "Na (mg/l)";
+		conversion:object <http://purl.obolibrary.org/obo/CHEBI_29101>;
+		
+		conversion:range xsd:double;
+		conversion:equivalent_property <http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#hasValue> .
+      ];
+	  
+	conversion:enhance [
+		ov:csvCol 4, 5;
+		conversion:predicate  oboe:hasUnit;
+		conversion:object     <http://purl.obolibrary.org/obo/UO_0000273>;
+      ];
+
+	rdf:value conversion:equivalent_property oboe:Measurement .
+]; .
